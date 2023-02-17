@@ -33,11 +33,11 @@ function InputColor() {
     if (readerRgb && colorInput && value.length === 7) {
       readerRgb.innerText = colorInput;
     } else {
-      readerRgb.innerText = null;
+      readerRgb.innerText = "";
     }
 
     let regexp = /^#[0-9a-f]{6}/i;
-    if (value.length === 7 && regexp.test(value) === false) {
+    if (value.length >= 7 && regexp.test(value) === false) {
       readerRgb.innerText = "Ошибка!";
       containerItem.style.background = "none";
     }
